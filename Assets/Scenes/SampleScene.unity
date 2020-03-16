@@ -511,6 +511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  laser: {fileID: 9055909419922094193, guid: 721593f96e29a7a459aa20eaa16b221e, type: 3}
+  laserPosition: {x: 0, y: 0.225, z: 0}
 --- !u!54 &2013065971
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour {
 
     public float speed;
+    public GameObject laser;
+    public Vector3 laserPosition;
     Rigidbody rigidbody;
 
     void Start() {
@@ -13,7 +15,9 @@ public class PlayerBehaviour : MonoBehaviour {
     }
 
     void Update() {
-        
+        if (Input.GetButtonDown("Jump")) {
+            Instantiate(laser, transform.position + laserPosition, Quaternion.identity);
+        }
     }
 
     private void FixedUpdate() {
