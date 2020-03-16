@@ -7,9 +7,18 @@ public class LaserBehaviour : MonoBehaviour {
     public float speed;
     public int lifeTime;
     Rigidbody rb;
+    public bool isUp = true;
+    Vector3 direction;
 
     void Start() {
         rb = GetComponent<Rigidbody>();
+        
+        if (isUp) {
+            direction = Vector3.up;
+        } else {
+            direction = Vector3.down;
+        }
+
         Destroy(this.gameObject, lifeTime);
     }
 
@@ -18,7 +27,7 @@ public class LaserBehaviour : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        rb.velocity = Vector3.up * speed;
+        rb.velocity = direction * speed;
     }
 
 }
