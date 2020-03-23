@@ -8,11 +8,11 @@ public class PlayerBehaviour : MonoBehaviour {
     public float speed;
     public GameObject laser;
     public Vector3 laserPosition;
-    Rigidbody rigidbody;
+    Rigidbody rb;
     private float inputH;
 
     void Start() {
-        rigidbody = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update() {
@@ -24,6 +24,6 @@ public class PlayerBehaviour : MonoBehaviour {
     private void FixedUpdate() {
         inputH = Input.GetAxis("Horizontal");
         
-        rigidbody.velocity = new Vector3(inputH * speed, 0f);
+        rb.velocity = new Vector3(inputH * speed, 0f);
     }
 }
