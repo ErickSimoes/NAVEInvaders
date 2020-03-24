@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 public class PlayerBehaviour : MonoBehaviour {
 
     public float speed;
     public GameObject laser;
     public Vector3 laserPosition;
-    Rigidbody rb;
+    [SerializeField]
+    private Rigidbody rb;
     private float inputH;
 
     void Start() {
-        rb = GetComponent<Rigidbody>();
+        
     }
 
     void Update() {
