@@ -9,16 +9,20 @@ public class PlayerBehaviour : MonoBehaviour {
     public Vector3 laserPosition;
     [SerializeField]
     private Rigidbody rb;
+    [SerializeField]
+    private Animator animator;
     private float inputH;
 
     void Start() {
-        
+        animator = GetComponent<Animator>();
     }
 
     void Update() {
         if (Input.GetButtonDown("Jump")) {
             Instantiate(laser, transform.position + laserPosition, Quaternion.identity);
         }
+
+        animator.SetFloat("Turn", inputH);
     }
 
     private void FixedUpdate() {
