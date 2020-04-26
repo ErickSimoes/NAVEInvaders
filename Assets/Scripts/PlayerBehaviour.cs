@@ -15,6 +15,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     void Awake() {
         animator = GetComponent<Animator>();
+        rb = GetComponentInParent<Rigidbody>();
     }
 
     void Update() {
