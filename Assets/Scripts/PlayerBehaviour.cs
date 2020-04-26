@@ -7,7 +7,6 @@ public class PlayerBehaviour : MonoBehaviour {
     public float speed;
     public GameObject laser;
     public Vector3 laserPosition;
-    [SerializeField]
     private Rigidbody rb;
     [SerializeField]
     private Animator animator;
