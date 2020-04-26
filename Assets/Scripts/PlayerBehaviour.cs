@@ -13,7 +13,7 @@ public class PlayerBehaviour : MonoBehaviour {
     private Animator animator;
     private float inputH;
 
-    void Start() {
+    void Awake() {
         animator = GetComponent<Animator>();
     }
 
